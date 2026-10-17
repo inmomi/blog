@@ -61,7 +61,7 @@ export default defineConfig({
         decapCmsOauth({
             configPath: "./.decap.yml", // Path to the Decap CMS configuration file
             decapCMSVersion: "3.9.0",
-            enable: false, // Set to true to use oauth (Requires .env configuration)
+            enable: true, // Built-in Decap OAuth — requires OAUTH_GITHUB_CLIENT_ID/SECRET env vars on an SSR host (GitHub Pages static cannot run the callback)
         }),
         swup({
             theme: false,

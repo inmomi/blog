@@ -5,7 +5,7 @@ backend:
     branch: main
     site_domain: inmomi.github.io
     base_url: https://inmomi.github.io/blog
-    auth_endpoint: https://REPLACE-WITH-YOUR-WORKER.workers.dev # 外部 OAuth 回调（Cloudflare Worker / Vercel 函数），部署后替换为真实地址
+    auth_endpoint: oauth # 内置 Decap OAuth 回调：需 SSR 托管（Cloudflare Pages/Vercel/Netlify）才能运行 /oauth/callback；纯静态 GitHub Pages 无法使用
 
 
 # 设置后台系统语言 (zh_Hans 简体中文 | en 英文 | ...)
