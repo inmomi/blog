@@ -54,7 +54,7 @@ const adapter = process.env.GITHUB_ACTIONS
 // Ref: https://astro.build/config
 export default defineConfig({
     site: siteConfig.siteURL,
-    base: "/",
+    base: process.env.GITHUB_ACTIONS ? "/blog" : "/",
     trailingSlash: "always",
     adapter: adapter,
     integrations: [
